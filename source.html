@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <title>Source Code</title>
+  </head>
+  <body>
+    <style>
+      .logo
+      {
+        border: 2px solid red;
+      }
+        .container
+        {
+            width:100%;
+            border: 2px solid ;
+            padding: 60px 20px 80px 60px;
+            border-radius: 5px;
+            margin-top: 30px;
+            
+        }
+        .btncode
+        {
+            border-radius: 5px;
+            background-color:whitesmoke;
+            color: rgb(165, 106, 29);
+        }
+        .btncode:hover
+        {
+         text-shadow: 4px 4px whitesmoke;  
+        }
+    </style>
+    <!-- navbar start -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#" class="logo">S D</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+              <a class="nav-link active" aria-current="page" href="front.html">Home</a>
+              <a class="nav-link" href="napvideo.html">Video</a>
+              <a class="nav-link" href="image.html">Images</a>
+              <a class="nav-link" href="source.html">Source Code</a>
+
+             
+            </div>
+          </div>
+        </div>
+      </nav>
+    
+     <!-- navbar ends -->
+      <div align="center">
+        <h1>SOURCE CODE</h1>
+      </div>
+      <!-- container -->
+    <div class="container" class="container">
+        #include <Servo.h><br><br>
+
+            // Pin Definitions<br>
+            const int slideSwitchPin = 2;    // Slide switch input pin (use digital pin)<br>
+            const int ledPin = 6;            // LED pin<br>
+            const int servoPin = 9;          // Servo motor pin<br>
+            const int buzzerPin = 5;         // Buzzer pin<br><br>
+            
+            unsigned long slideSwitchStartTime = 0;<br>
+            bool slideSwitchActivated = false;<br>
+            bool alarmActivated = false;<br>
+            
+            Servo driverServo;<br><br>
+            
+            void setup() {<br>
+              pinMode(slideSwitchPin, INPUT);   // Set the slide switch pin as input<br>
+              pinMode(ledPin, OUTPUT);<br>
+              pinMode(buzzerPin, OUTPUT);<br>
+              driverServo.attach(servoPin);<br>
+              driverServo.write(0); // Initialize servo at 0 degrees<br>
+            
+              Serial.begin(9600);<br>
+              Serial.println("System Initialized: Anti-Sleep Alarm for Driver");<br>
+            }<br><br>
+            
+            void loop() {<br>
+              int slideSwitchState = digitalRead(slideSwitchPin);  // Read the state of the slide switch<br>
+              Serial.print("Slide Switch State: ");<br>
+              Serial.println(slideSwitchState);<br>
+            
+              // If the slide switch is activated (ON)<br>
+              if (slideSwitchState == HIGH) {<br>
+                if (!slideSwitchActivated) {<br>
+                  slideSwitchActivated = true;<br>
+                  slideSwitchStartTime = millis(); // Start the timer when the switch is turned on<br>
+                } else {<br>
+                  // Check if the switch has been ON for more than 5 seconds<br>
+                  if ((millis() - slideSwitchStartTime) >= 5000 && !alarmActivated) {<br>
+                    activateAlarm();<br>
+                    alarmActivated = true;<br>
+                  }<br>
+                }<br>
+              } else {<br>
+                // Reset the alarm if the switch is turned off<br>
+                slideSwitchActivated = false;<br>
+                alarmActivated = false;<br>
+                deactivateAlarm();<br>
+              }<br>
+            
+              delay(100);<br>
+            }<br><br>
+            
+            // Function to activate LED, buzzer, and move servo motor once<br>
+            void activateAlarm() {<br><br>
+              // Turn on LED<br><br>
+              digitalWrite(ledPin, HIGH);<br>
+            
+              // Activate buzzer<br>
+              digitalWrite(buzzerPin, HIGH);<br>
+              delay(2000); // Buzzer stays on for 2 seconds<br>
+              
+              // Move servo motor once<br>
+              driverServo.write(90);<br>
+              delay(1000); // Hold position for 1 second<br>
+              driverServo.write(0);<br>
+            
+              Serial.println("Drowsiness Detected! LED ON, Buzzer ON, Servo Activated");<br>
+            }<br><br>
+            
+            // Function to turn off LED and buzzer<br><br>
+            void deactivateAlarm() {<br>
+              digitalWrite(ledPin, LOW);<br>
+              digitalWrite(buzzerPin, LOW);<br>
+            }<br><br>
+            <button class="btncode">DOWNLOAD CODE</button>
+      </div>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    -->
+  </body>
+</html>

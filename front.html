@@ -1,0 +1,239 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>NAP BREAKER</title>
+  </head>
+  <style>
+    .c-item
+    {
+        
+    }
+    .c-img
+    {
+        height: 400px;
+    }
+    .head
+    {
+        background-color: wheat;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+  </style>
+  <body>
+    <!-- navigation section -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">S D</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+              <a class="nav-link" href="napvideo.html">Video</a>
+              <a class="nav-link" href="image.html">Images</a>
+              <a class="nav-link" href="source.html">Source Code</a>
+
+             
+            </div>
+          </div>
+        </div>
+      </nav>
+      <!-- navigation ends -->
+       <!-- header to know component -->
+       <div class="head">
+        <h1>COMPONENT USED IN THIS</h1>
+       </div>
+       <!-- header ends -->
+        <!-- carousal start -->
+       <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active c-item">
+            <img src="arduino.jpeg" class="d-flex w-100 c-img" alt="...">
+          </div>
+          <div class="carousel-item c-item">
+            <img src="breadboard.jpeg" class="d-block w-100 c-img" alt="...">
+          </div>
+          <div class="carousel-item c-item">
+            <img src="ir.jpeg" class="d-block w-100 c-img" alt="...">
+          </div>
+          <div class="carousel-item c-item">
+            <img src="buzzer.jpeg" class="d-block w-100 c-img" alt="...">
+          </div>
+          <div class="carousel-item c-item">
+            <img src="servo.jpeg" class="d-block w-100 c-img" alt="...">
+          </div>
+          <div class="carousel-item c-item">
+            <img src="redled.jpeg" class="d-block w-100 c-img" alt="...">
+          </div>
+          <div class="carousel-item c-item">
+            <img src="jumper.jpeg" class="d-block w-100 c-img" alt="...">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    <!-- carousal ends -->
+    <div class="container mt-4">
+        <div class="row">
+            <!-- Product 1 -->
+            <div class="col-md-3">
+                <div class="card product-card">
+                    <img src="arduino.jpeg" class="card-img-top" alt="Product 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Arduino uno r3</h5>
+                        <p class="card-text">Arduino is a hardware and software platform that lets users build interactive devices and applications. Arduino boards can read inputs from sensors and buttons, and then turn those inputs into outputs, like activating motors or turning on LEDs. </p>
+                        
+                        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal" data-bs-product="Product 1" data-bs-description="Short description of product 1." data-bs-price="$19.99">Read More</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Product 2 -->
+            <div class="col-md-3">
+                <div class="card product-card">
+                    <img src="breadboard.jpeg" class="card-img-top" alt="Product 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Breadboard</h5>
+                        <p class="card-text">A breadboard is a plastic board with rows of holes where you can easily insert the leads of electronic components, allowing you to build and test circuits without soldering.</p>
+                        
+                        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal" data-bs-product="Product 2" data-bs-description="Short description of product 2." data-bs-price="$29.99">Read More</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Product 3 -->
+            <div class="col-md-3">
+                <div class="card product-card">
+                    <img src="ir.jpeg" class="card-img-top" alt="Product 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Ir Sensor</h5>
+                        <p class="card-text">An IR sensor (infrared sensor) is an electronic device that detects infrared radiation, essentially "seeing" heat emitted by objects, allowing it to detect motion or the presence of objects without direct contact.</p>
+                        
+                        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal" data-bs-product="Product 3" data-bs-description="Short description of product 3." data-bs-price="$39.99">Read More</button>
+                    </div>
+                </div>
+            </div>
+            <!-- product 4 -->
+            <div class="col-md-3">
+                <div class="card product-card">
+                    <img src="buzzer.jpeg" class="card-img-top" alt="Product 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Buzzer</h5>
+                        <p class="card-text">A buzzer is a small electronic device that produces an audible sound, typically a buzzing or beeping noise, when an electrical current is applied to</p>
+                        
+                        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal" data-bs-product="Product 2" data-bs-description="Short description of product 2." data-bs-price="$29.99">Read More</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- cards section 2 -->
+    <div class="container mt-4">
+        <div class="row">
+            <!-- Product 1 -->
+            <div class="col-md-4">
+                <div class="card product-card">
+                    <img src="servo.jpeg" class="card-img-top" alt="Product 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Servo Motor</h5>
+                        <p class="card-text"> A servo motor is a specialized motor designed for precise control of rotational or linear motion. </p>
+                        
+                        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal" data-bs-product="Product 1" data-bs-description="Short description of product 1." data-bs-price="$19.99">Read More</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Product 2 -->
+            <div class="col-md-4">
+                <div class="card product-card">
+                    <img src="redled.jpeg" class="card-img-top" alt="Product 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Red Led</h5>
+                        <p class="card-text">An LED, which stands for "Light Emitting Diode," is a semiconductor device that produces light when an electric current flows through it.</p>
+                        
+                        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal" data-bs-product="Product 2" data-bs-description="Short description of product 2." data-bs-price="$29.99">Read More</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Product 3 -->
+            <div class="col-md-4">
+                <div class="card product-card">
+                    <img src="jumper.jpeg" class="card-img-top" alt="Product 3">
+                    <div class="card-body">
+                        <h5 class="card-title">jumper Wires</h5>
+                        <p class="card-text">Jumper wires are simply wires that have connector pins at each end, allowing them to be used to connect two points to each other without soldering.</p>
+                        
+                        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal" data-bs-product="Product 3" data-bs-description="Short description of product 3." data-bs-price="$39.99">Read More</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+     <!-- cards section 2 ends -->
+
+     <!-- Footer -->
+
+    <footer class="text-center text-lg-start bg-body-tertiary text-muted">
+      <!-- Section: Social media -->
+      <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+        <!-- Left -->
+           
+            <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+              <!-- Links -->
+              <h6 class="text-uppercase fw-bold mb-4">
+                links
+              </h6>
+              <p>
+                <a href="#!" class="text-reset"><i class="fa-brands fa-linkedin"></i>https://www.linkedin.com/in/sumit-gupta-aa9074282</a>
+              </p>
+              <p>
+                <a href="#!" class="text-reset"><i class="fa-brands fa-github"></i>https://github.com/Sumit-Gupta-art/Arithmetic-</a>
+              </p>
+               </div>
+            <!-- Grid column -->
+    
+            <!-- Grid column -->
+            <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+              <!-- Links -->
+              <h6 class="text-uppercase fw-bold mb-4">FeedBack</h6>
+              <p><i class="fas fa-home me-3"></i>sumitgupta69661@gmail.com</p>
+              <p>
+                <i class="fas fa-envelope me-3"></i>
+                itzdeepaksharma07@gmail.com
+              </p>
+             
+            </div>
+            <!-- Grid column -->
+          </div>
+          <!-- Grid row -->
+        </div>
+      </section>
+      <!-- Section: Links  -->
+    
+        </footer>
+    <!-- Footer -->
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    -->
+  </body>
+</html>
